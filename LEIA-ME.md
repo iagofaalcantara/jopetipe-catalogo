@@ -2,24 +2,25 @@
 
 ## O que tem na pasta
 - `index.html` — o site inteiro (visual, sacola, busca, pedido pelo WhatsApp).
-- `produtos.json` — lista dos produtos que o site mostra.
-- `produtos-planilha.csv` — a mesma lista em formato de planilha (abra no Excel ou Google Planilhas).
+- `produtos.json` — cópia de reserva dos produtos (o site usa se a planilha não abrir).
+- `produtos-planilha.csv` — a mesma lista em formato de planilha (modelo para importar no Google Planilhas).
 - `images/` — as fotos das peças (`images/<REFERÊNCIA>.webp`).
-
-## Colocar no ar (grátis)
-1. Crie uma conta gratuita em **Cloudflare Pages** (ou Netlify) e escolha "enviar arquivos" (upload direto).
-2. Envie esta pasta inteira (sem compactar, ou o ZIP, conforme a plataforma pedir).
-3. Registre o domínio em nome dela (por exemplo `jopetipe.com.br`, em torno de R$ 40/ano no Registro.br) e aponte para o site na própria plataforma.
+- `docs/PLANILHA.md` — **guia de quem edita os produtos** (leia este!).
+- `scripts/validar-produtos.mjs` — confere a planilha e atualiza o `produtos.json`.
 
 ## Adicionar ou alterar produtos
-**Jeito simples (sem mexer em código): Google Planilhas**
-1. Importe `produtos-planilha.csv` no Google Planilhas.
-2. Arquivo > Compartilhar > Publicar na web > escolha a aba e o formato **CSV** > Publicar. Copie o link.
-3. No `index.html`, cole o link em `sheetCsvUrl` (bloco CONFIGURAÇÃO, no começo do script).
-4. Daí em diante, ela edita a planilha (nome, preço, categoria, "Ativo" = Sim/Não) e o site atualiza sozinho.
-5. Foto nova: salve em `images/` com o nome da referência (ex.: `PROD-048.webp`) e reenvie a pasta `images`. Deixe a coluna "Imagem" em branco ou preencha com `images/PROD-048.webp`.
+Os produtos vêm da aba **Catálogo** do Google Planilhas. O link já está configurado em `sheetCsvUrl` (bloco CONFIGURAÇÃO do `index.html`).
 
-**Jeito direto:** edite `produtos.json` e reenvie o arquivo.
+**Passo a passo completo, em português simples: [docs/PLANILHA.md](docs/PLANILHA.md)** — colunas, como adicionar, esconder e destacar peças, como subir fotos e o que fazer se algo não aparecer.
+
+Ordem que o site segue para ler os produtos: planilha → última lista guardada no navegador → `produtos.json`.
+
+## Conferir a planilha (opcional, para quem tem Node instalado)
+```
+node scripts/validar-produtos.mjs                 # aponta referência repetida, preço inválido, categoria vazia, foto que falta
+node scripts/validar-produtos.mjs --gerar-json    # confere e atualiza o produtos.json com o que está na planilha
+```
+Rode `--gerar-json` de vez em quando e publique o `produtos.json` novo, para a cópia de reserva ficar em dia.
 
 ## Outros ajustes
 - WhatsApp, Instagram e e-mail: bloco CONFIGURAÇÃO no começo do script do `index.html`.
