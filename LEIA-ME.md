@@ -11,7 +11,7 @@
 ## Adicionar ou alterar produtos
 Os produtos vêm da aba **Catálogo** do Google Planilhas. O link já está configurado em `sheetCsvUrl` (bloco CONFIGURAÇÃO do `index.html`).
 
-**Passo a passo completo, em português simples: [docs/PLANILHA.md](docs/PLANILHA.md)** — colunas, como adicionar, esconder e destacar peças, como subir fotos e o que fazer se algo não aparecer.
+**Passo a passo completo, em português simples: [docs/PLANILHA.md](docs/PLANILHA.md)** — colunas, como adicionar, esconder e destacar peças, como colocar fotos (pelo Google Drive ou pelo GitHub) e o que fazer se algo não aparecer.
 
 Ordem que o site segue para ler os produtos: planilha → última lista guardada no navegador → `produtos.json`.
 

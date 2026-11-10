@@ -395,6 +395,12 @@ var FALLBACK = [
     else if(d>=0&&/^\d{1,3}(\.\d{3})+$/.test(s)){s=s.replace(/\./g,"")}
     return parseFloat(s);
   }
+  /* Link comum do Google Drive (compartilhar > qualquer pessoa com o link) vira endereço de imagem direta */
+  function imgUrl(u){
+    u=String(u||"").trim();
+    var m=/^https?:\/\/(?:drive|docs)\.google\.com\/(?:file\/d\/|open\?(?:[^#]*&)?id=|uc\?(?:[^#]*&)?id=|thumbnail\?(?:[^#]*&)?id=)([\w-]{10,})/.exec(u);
+    return m?"https://drive.google.com/thumbnail?id="+m[1]+"&sz=w1000":u;
+  }
   /* Valida e padroniza qualquer lista (planilha, cache, JSON). Ignora linhas problemáticas. */
   function clean(list,strictRef){
     var seen={},out=[];
@@ -407,7 +413,7 @@ var FALLBACK = [
       if(seen[ref]||!nome||!isFinite(preco)||preco<=0) return;
       seen[ref]=1;
       out.push({ref:ref,nome:nome,categoria:String(p.categoria||"").trim()||"Outros",preco:preco,
-        imagem:String(p.imagem||"").trim()||("images/"+ref+".webp"),selo:String(p.selo||"").trim(),data:String(p.data||"").trim(),
+        imagem:imgUrl(p.imagem)||("images/"+ref+".webp"),selo:String(p.selo||"").trim(),data:String(p.data||"").trim(),
         tags:(Array.isArray(p.tags)?p.tags:[]).map(function(t){return String(t).trim()}).filter(Boolean),
         descricao:String(p.descricao||"").trim(),ativo:p.ativo!==false,doisBanhos:!!p.doisBanhos,destaque:!!p.destaque});
     });

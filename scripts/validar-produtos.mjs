@@ -66,6 +66,12 @@ function parsePreco(v) {
   return parseFloat(s);
 }
 
+function imgUrl(u) {
+  u = String(u || "").trim();
+  const m = /^https?:\/\/(?:drive|docs)\.google\.com\/(?:file\/d\/|open\?(?:[^#]*&)?id=|uc\?(?:[^#]*&)?id=|thumbnail\?(?:[^#]*&)?id=)([\w-]{10,})/.exec(u);
+  return m ? `https://drive.google.com/thumbnail?id=${m[1]}&sz=w1000` : u;
+}
+
 async function lerTexto(o) {
   if (/^https?:\/\//i.test(o)) {
     const r = await fetch(o);
@@ -118,9 +124,11 @@ for (const { cells: r, linha } of rows.slice(1)) {
   vistos.set(ref, linha);
   if (!categoria) aviso(linha, `${ref} sem Categoria — vai aparecer em "Outros".`);
 
-  const arq = imagem || `images/${ref}.webp`;
-  if (ativo && !/^(https?:)?\/\//i.test(arq) && !existsSync(join(RAIZ, arq))) {
-    aviso(linha, `${ref} sem foto: não existe ${arq}.`);
+  const arq = imgUrl(imagem) || `images/${ref}.webp`;
+  if (/drive\.google\.com|docs\.google\.com/i.test(imagem) && !/[?&]id=[\w-]{10,}|\/file\/d\/[\w-]{10,}/.test(imagem)) {
+    aviso(linha, `${ref}: o link do Drive na coluna Imagem não parece um link de arquivo.`);
+  } else if (ativo && !/^(https?:)?\/\//i.test(arq) && !existsSync(join(RAIZ, arq))) {
+    aviso(linha, `${ref} sem foto: não existe ${arq} (suba a foto no GitHub ou cole o link do Drive na coluna Imagem).`);
   }
 
   produtos.push({
