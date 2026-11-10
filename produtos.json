@@ -1,0 +1,204 @@
+[
+  {
+    "ref": "COLAR-001",
+    "nome": "Colar Luxo Tiff",
+    "categoria": "Colares",
+    "preco": 79.9,
+    "imagem": "images/COLAR-001.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": true,
+    "destaque": true
+  },
+  {
+    "ref": "PROD-017",
+    "nome": "Colar Essence | Aço inoxidável premium dourado",
+    "categoria": "Colares",
+    "preco": 59.9,
+    "imagem": "images/PROD-017.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "dourado",
+      "aço inox",
+      "premium"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-038",
+    "nome": "Pulseira Opaline | Riviera premium elegance",
+    "categoria": "Pulseiras",
+    "preco": 69.9,
+    "imagem": "images/PROD-038.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera",
+      "premium"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-039",
+    "nome": "Pulseira Diamanté | Riviera premium cravejada",
+    "categoria": "Pulseiras",
+    "preco": 75.9,
+    "imagem": "images/PROD-039.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera",
+      "premium"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-040",
+    "nome": "Pulseira Lumière | Riviera luxo com zircônias",
+    "categoria": "Pulseiras",
+    "preco": 75.9,
+    "imagem": "images/PROD-040.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "zircônia",
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-041",
+    "nome": "Pulseira Nobreza | Riviera brilho máximo",
+    "categoria": "Pulseiras",
+    "preco": 82.9,
+    "imagem": "images/PROD-041.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-042",
+    "nome": "Pulseira Splendor | Riviera premium com zircônias",
+    "categoria": "Pulseiras",
+    "preco": 89.9,
+    "imagem": "images/PROD-042.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "zircônia",
+      "riviera",
+      "premium"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-043",
+    "nome": "Pulseira Fascínio | Riviera exclusiva cravejada",
+    "categoria": "Pulseiras",
+    "preco": 89.9,
+    "imagem": "images/PROD-043.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-044",
+    "nome": "Pulseira Estelar | Riviera luxo exclusiva",
+    "categoria": "Pulseiras",
+    "preco": 109.9,
+    "imagem": "images/PROD-044.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-045",
+    "nome": "Pulseira Imperial | Riviera luxo dourada",
+    "categoria": "Pulseiras",
+    "preco": 109.9,
+    "imagem": "images/PROD-045.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "dourado",
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-046",
+    "nome": "Pulseira Crystal | Riviera brilho intenso",
+    "categoria": "Pulseiras",
+    "preco": 119.9,
+    "imagem": "images/PROD-046.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "riviera"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  },
+  {
+    "ref": "PROD-047",
+    "nome": "Pulseira Golden Glow | Riviera dourada premium",
+    "categoria": "Pulseiras",
+    "preco": 109.9,
+    "imagem": "images/PROD-047.webp",
+    "selo": "",
+    "data": "2026-06-03",
+    "tags": [
+      "dourado",
+      "riviera",
+      "premium"
+    ],
+    "descricao": "",
+    "ativo": true,
+    "doisBanhos": false,
+    "destaque": false
+  }
+]
