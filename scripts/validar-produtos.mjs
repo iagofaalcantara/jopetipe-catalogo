@@ -125,7 +125,9 @@ for (const { cells: r, linha } of rows.slice(1)) {
   if (!categoria) aviso(linha, `${ref} sem Categoria — vai aparecer em "Outros".`);
 
   const arq = imgUrl(imagem) || `images/${ref}.webp`;
-  if (/drive\.google\.com|docs\.google\.com/i.test(imagem) && !/[?&]id=[\w-]{10,}|\/file\/d\/[\w-]{10,}/.test(imagem)) {
+  if (imagem && !/[\\/]/.test(imagem)) {
+    aviso(linha, `${ref}: a coluna Imagem tem só "${imagem}", sem link. Se colou um link do Drive, ele virou "chip": cole de novo com Ctrl+Shift+V.`);
+  } else if (/drive\.google\.com|docs\.google\.com/i.test(imagem) && !/[?&]id=[\w-]{10,}|\/file\/d\/[\w-]{10,}/.test(imagem)) {
     aviso(linha, `${ref}: o link do Drive na coluna Imagem não parece um link de arquivo.`);
   } else if (ativo && !/^(https?:)?\/\//i.test(arq) && !existsSync(join(RAIZ, arq))) {
     aviso(linha, `${ref} sem foto: não existe ${arq} (suba a foto no GitHub ou cole o link do Drive na coluna Imagem).`);

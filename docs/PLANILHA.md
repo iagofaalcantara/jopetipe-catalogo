@@ -39,8 +39,10 @@ Coloque **Destaque = Sim**. Para tirar, `Não`.
 1. Reduza o peso da foto (veja "Tamanho ideal" abaixo) e envie para uma pasta do seu **Google Drive**.
 2. Clique com o botão direito na foto > **Compartilhar** > em "Acesso geral" escolha **Qualquer pessoa com o link** (permissão "Leitor").
 3. Clique em **Copiar link**.
-4. Na planilha, cole o link na coluna **Imagem** da peça.
+4. Na planilha, clique na célula da coluna **Imagem** e cole o link com **Ctrl+Shift+V** (colar sem formatação). Assim o link fica como texto.
 5. Espere alguns minutos e atualize o site.
+
+**Atenção ao "chip":** se, ao colar, a célula virar uma etiqueta com o nome da foto (um quadradinho com ícone), aperte **Ctrl+Z** na hora, ou cole de novo com Ctrl+Shift+V. Etiqueta não funciona no site; só o link em texto. Para conferir, clique na célula: na barra de cima deve aparecer `https://drive.google.com/...`.
 
 Importante: se o compartilhamento não estiver como "Qualquer pessoa com o link", a foto não aparece para as clientes. Cole o link do **arquivo**, não o da pasta.
 
@@ -61,7 +63,7 @@ O Google guarda uma cópia da planilha publicada e a renova só de tempos em tem
 
 ## Se algo não aparecer
 - **Peça não aparece:** confira se **Ativo** não está como `Não`, se a **Referência** não está repetida ou vazia, se o **Nome** está preenchido e se o **Preço** é um número. Linhas assim são ignoradas pelo site de propósito.
-- **Aparece sem foto (só as iniciais):** se usou o Drive, confira se o compartilhamento está em "Qualquer pessoa com o link" e se o link é do arquivo (não da pasta). Se usou o GitHub, confira se o nome do arquivo é igual à Referência e termina em `.webp`.
+- **Aparece sem foto (só as iniciais):** se usou o Drive, confira se a célula tem o link completo (e não uma etiqueta com o nome do arquivo), confira se o compartilhamento está em "Qualquer pessoa com o link" e se o link é do arquivo (não da pasta). Se usou o GitHub, confira se o nome do arquivo é igual à Referência e termina em `.webp`.
 - **Preço estranho:** apague o conteúdo da célula e digite de novo, só o número (ex.: `79,90`).
 - **Mudei e nada mudou:** espere uns 5 minutos e atualize a página (no celular, feche e abra o navegador).
 - **Continua sem aparecer:** peça ajuda a quem cuida do site. Se o link da planilha deixar de funcionar, o site continua mostrando a última lista que carregou, por isso a vitrine não fica vazia.
